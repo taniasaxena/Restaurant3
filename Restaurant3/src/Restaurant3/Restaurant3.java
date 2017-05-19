@@ -12,6 +12,7 @@ package Restaurant3;
 public class Restaurant3 extends javax.swing.JFrame {
 //tania
 //cynthia
+//hi
     /**
      * Creates new form Restaurant1
      */
