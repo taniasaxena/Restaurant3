@@ -106,7 +106,7 @@ public class Restaurant3 extends javax.swing.JFrame {
         jTextArea1.setColumns(20);
         jTextArea1.setFont(new java.awt.Font("Monospaced", 0, 18)); // NOI18N
         jTextArea1.setRows(5);
-        jTextArea1.setText("             Archie's Munchies\n\t\t    ~~~\n");
+        jTextArea1.setText("             Archie's Munchies\n\t\t   ~~~\n");
         jScrollPane1.setViewportView(jTextArea1);
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -156,6 +156,11 @@ public class Restaurant3 extends javax.swing.JFrame {
 
         ChickenBurgerCheckbox.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         ChickenBurgerCheckbox.setText("Chicken Burger ");
+        ChickenBurgerCheckbox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ChickenBurgerCheckboxActionPerformed(evt);
+            }
+        });
 
         ChickenBurgerMealCheckbox.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         ChickenBurgerMealCheckbox.setText("Chicken Burger meal ");
@@ -287,6 +292,10 @@ public class Restaurant3 extends javax.swing.JFrame {
     private void ExitButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ExitButtonActionPerformed
         System.exit(0);
     }//GEN-LAST:event_ExitButtonActionPerformed
+
+    private void ChickenBurgerCheckboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChickenBurgerCheckboxActionPerformed
+        jTextArea1.append("1 Chicken Burger\t$2.50\n");
+    }//GEN-LAST:event_ChickenBurgerCheckboxActionPerformed
 
     /**
      * @param args the command line arguments
