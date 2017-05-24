@@ -13,6 +13,7 @@ public class Restaurant3 extends javax.swing.JFrame {
 //tania
 //cynthia
 //hi
+double total = 0;
     /**
      * Creates new form Restaurant1
      */
@@ -77,7 +78,6 @@ public class Restaurant3 extends javax.swing.JFrame {
 
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
 
-        jTextArea1.setEditable(false);
         jTextArea1.setColumns(20);
         jTextArea1.setFont(new java.awt.Font("Monospaced", 0, 18)); // NOI18N
         jTextArea1.setRows(5);
@@ -139,18 +139,38 @@ public class Restaurant3 extends javax.swing.JFrame {
 
         ChickenBurgerMealCheckbox.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         ChickenBurgerMealCheckbox.setText("Chicken Burger meal ");
+        ChickenBurgerMealCheckbox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ChickenBurgerMealCheckboxActionPerformed(evt);
+            }
+        });
 
         CheeseCheckbox.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         CheeseCheckbox.setText("Cheese Burger");
+        CheeseCheckbox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CheeseCheckboxActionPerformed(evt);
+            }
+        });
 
         DrinksLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         DrinksLabel.setText("Drinks ");
 
         DrinksCombobox.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        DrinksCombobox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Coke", "Sprite", "Fanta", "Root Beer" }));
+        DrinksCombobox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "<None>", "Coke", "Sprite", "Fanta", "Root Beer" }));
+        DrinksCombobox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DrinksComboboxActionPerformed(evt);
+            }
+        });
 
         TaxCheckbox.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         TaxCheckbox.setText("Tax");
+        TaxCheckbox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TaxCheckboxActionPerformed(evt);
+            }
+        });
 
         HomeDeliveryCheckBox.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         HomeDeliveryCheckBox.setText("Home Delivery ");
@@ -270,7 +290,27 @@ public class Restaurant3 extends javax.swing.JFrame {
 
     private void ChickenBurgerCheckboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChickenBurgerCheckboxActionPerformed
         jTextArea1.append("1 Chicken Burger\t$2.50\n");
+        total+=2.5;
     }//GEN-LAST:event_ChickenBurgerCheckboxActionPerformed
+
+    private void ChickenBurgerMealCheckboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChickenBurgerMealCheckboxActionPerformed
+        jTextArea1.append("1 Chicken Burger Meal\t$3.50\n");
+        total+=3.5;
+    }//GEN-LAST:event_ChickenBurgerMealCheckboxActionPerformed
+
+    private void CheeseCheckboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CheeseCheckboxActionPerformed
+        jTextArea1.append("1 Cheese Burger\t\t$2.50\n");
+        total+=2.5;
+    }//GEN-LAST:event_CheeseCheckboxActionPerformed
+
+    private void TaxCheckboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TaxCheckboxActionPerformed
+        double tax = total*0.10;
+        jTextArea1.append("\nTax:\t\t\t" + tax);
+    }//GEN-LAST:event_TaxCheckboxActionPerformed
+
+    private void DrinksComboboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DrinksComboboxActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_DrinksComboboxActionPerformed
 
     /**
      * @param args the command line arguments
