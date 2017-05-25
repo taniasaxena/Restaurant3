@@ -19,6 +19,7 @@ double total = 0;
      */
     public Restaurant3() {
         initComponents();
+        
     }
 
     /**
@@ -343,6 +344,7 @@ double total = 0;
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
                 new Restaurant3().setVisible(true);
+                new Tables().setVisible(true);
             }
         });
     }
