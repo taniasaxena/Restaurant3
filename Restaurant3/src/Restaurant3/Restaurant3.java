@@ -5,6 +5,9 @@
  */
 package Restaurant3;
 //hitstimg1233
+
+import java.text.DecimalFormat;
+
 /**
  *
  * @author saxetan18
@@ -174,6 +177,11 @@ double total = 0;
 
         HomeDeliveryCheckBox.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
         HomeDeliveryCheckBox.setText("Home Delivery ");
+        HomeDeliveryCheckBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HomeDeliveryCheckBoxActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
@@ -244,13 +252,10 @@ double total = 0;
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(layout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                        .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                    .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -290,27 +295,48 @@ double total = 0;
 
     private void ChickenBurgerCheckboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChickenBurgerCheckboxActionPerformed
         jTextArea1.append("1 Chicken Burger\t$2.50\n");
-        total+=2.5;
+        total+=2.50;
     }//GEN-LAST:event_ChickenBurgerCheckboxActionPerformed
 
     private void ChickenBurgerMealCheckboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChickenBurgerMealCheckboxActionPerformed
         jTextArea1.append("1 Chicken Burger Meal\t$3.50\n");
-        total+=3.5;
+        total+=3.50;
     }//GEN-LAST:event_ChickenBurgerMealCheckboxActionPerformed
 
     private void CheeseCheckboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CheeseCheckboxActionPerformed
         jTextArea1.append("1 Cheese Burger\t\t$2.50\n");
-        total+=2.5;
+        total+=2.50;
     }//GEN-LAST:event_CheeseCheckboxActionPerformed
 
     private void TaxCheckboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TaxCheckboxActionPerformed
-        double tax = total*0.10;
-        jTextArea1.append("\nTax:\t\t\t" + tax);
+        double tax = total*0.095;
+        DecimalFormat df = new DecimalFormat("#.##");
+        String t = df.format(tax);
+        jTextArea1.append("\nTax:\t\t\t$" + t + "\n");
     }//GEN-LAST:event_TaxCheckboxActionPerformed
 
     private void DrinksComboboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DrinksComboboxActionPerformed
-        // TODO add your handling code here:
+        if(DrinksCombobox.getSelectedIndex() == 0){
+            jTextArea1.append("No Drink\t\t$0.00\n");
+            total+=1.00;
+        }else if(DrinksCombobox.getSelectedIndex() == 1){
+            jTextArea1.append("1 Coke Drink\t\t$1.00\n");
+            total+=1.00;
+        }else if(DrinksCombobox.getSelectedIndex() == 2){
+            jTextArea1.append("1 Sprite Drink\t\t$1.00\n");
+            total+=1.00;
+        }else if(DrinksCombobox.getSelectedIndex() == 3){
+            jTextArea1.append("1 Fanta Drink\t\t$1.00\n");
+            total+=1.00;
+        }else if(DrinksCombobox.getSelectedIndex() == 4){
+            jTextArea1.append("1 Root Beer Drink\t$1.00\n");
+            total+=1.00;
+        }
     }//GEN-LAST:event_DrinksComboboxActionPerformed
+
+    private void HomeDeliveryCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HomeDeliveryCheckBoxActionPerformed
+        //jTextArea1.append("")
+    }//GEN-LAST:event_HomeDeliveryCheckBoxActionPerformed
 
     /**
      * @param args the command line arguments
