@@ -49,6 +49,7 @@ double total = 0;
         DrinksCombobox = new javax.swing.JComboBox();
         TaxCheckbox = new javax.swing.JCheckBox();
         HomeDeliveryCheckBox = new javax.swing.JCheckBox();
+        jButton1 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         ExitButton = new javax.swing.JButton();
 
@@ -184,6 +185,13 @@ double total = 0;
             }
         });
 
+        jButton1.setText("Total");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
@@ -203,6 +211,10 @@ double total = 0;
                     .addComponent(HomeDeliveryCheckBox)
                     .addComponent(DrinksCombobox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(36, 36, 36))
+            .addGroup(jPanel7Layout.createSequentialGroup()
+                .addGap(136, 136, 136)
+                .addComponent(jButton1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -221,7 +233,9 @@ double total = 0;
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(TaxCheckbox)
                     .addComponent(HomeDeliveryCheckBox))
-                .addContainerGap(41, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jLabel1.setFont(new java.awt.Font("Tw Cen MT", 1, 36)); // NOI18N
@@ -295,17 +309,17 @@ double total = 0;
     }//GEN-LAST:event_ExitButtonActionPerformed
 
     private void ChickenBurgerCheckboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChickenBurgerCheckboxActionPerformed
-        jTextArea1.append("1 Chicken Burger\t$2.50\n");
+        jTextArea1.append("1 Chicken Burger\t\t$2.50\n");
         total+=2.50;
     }//GEN-LAST:event_ChickenBurgerCheckboxActionPerformed
 
     private void ChickenBurgerMealCheckboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ChickenBurgerMealCheckboxActionPerformed
-        jTextArea1.append("1 Chicken Burger Meal\t$3.50\n");
+        jTextArea1.append("1 Chicken Burger Meal\t\t$3.50\n");
         total+=3.50;
     }//GEN-LAST:event_ChickenBurgerMealCheckboxActionPerformed
 
     private void CheeseCheckboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CheeseCheckboxActionPerformed
-        jTextArea1.append("1 Cheese Burger\t\t$2.50\n");
+        jTextArea1.append("1 Cheese Burger\t\t\t$2.50\n");
         total+=2.50;
     }//GEN-LAST:event_CheeseCheckboxActionPerformed
 
@@ -313,31 +327,36 @@ double total = 0;
         double tax = total*0.095;
         DecimalFormat df = new DecimalFormat("#.##");
         String t = df.format(tax);
-        jTextArea1.append("\nTax:\t\t\t$" + t + "\n");
+        jTextArea1.append("\nTax:\t\t\t\t$" + t + "\n");
     }//GEN-LAST:event_TaxCheckboxActionPerformed
 
     private void DrinksComboboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DrinksComboboxActionPerformed
         if(DrinksCombobox.getSelectedIndex() == 0){
-            jTextArea1.append("No Drink\t\t$0.00\n");
+            jTextArea1.append("No Drink\t\t\t$0.00\n");
             total+=1.00;
         }else if(DrinksCombobox.getSelectedIndex() == 1){
-            jTextArea1.append("1 Coke Drink\t\t$1.00\n");
+            jTextArea1.append("1 Coke Drink\t\t\t$1.00\n");
             total+=1.00;
         }else if(DrinksCombobox.getSelectedIndex() == 2){
-            jTextArea1.append("1 Sprite Drink\t\t$1.00\n");
+            jTextArea1.append("1 Sprite Drink\t\t\t$1.00\n");
             total+=1.00;
         }else if(DrinksCombobox.getSelectedIndex() == 3){
-            jTextArea1.append("1 Fanta Drink\t\t$1.00\n");
+            jTextArea1.append("1 Fanta Drink\t\t\t$1.00\n");
             total+=1.00;
         }else if(DrinksCombobox.getSelectedIndex() == 4){
-            jTextArea1.append("1 Root Beer Drink\t$1.00\n");
+            jTextArea1.append("1 Root Beer Drink\t\t$1.00\n");
             total+=1.00;
         }
     }//GEN-LAST:event_DrinksComboboxActionPerformed
 
     private void HomeDeliveryCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HomeDeliveryCheckBoxActionPerformed
-        //jTextArea1.append("")
+        jTextArea1.append("Delivery Fee\t\t\t$3.00\n");
     }//GEN-LAST:event_HomeDeliveryCheckBoxActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        double taxtotal = tax + total;
+        jTextArea1.append("Total\t\t\t\t" + );
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -384,6 +403,7 @@ double total = 0;
     private javax.swing.JButton ExitButton;
     private javax.swing.JCheckBox HomeDeliveryCheckBox;
     private javax.swing.JCheckBox TaxCheckbox;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
