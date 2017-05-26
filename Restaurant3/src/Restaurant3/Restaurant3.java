@@ -17,6 +17,7 @@ public class Restaurant3 extends javax.swing.JFrame {
 //cynthia
 //hi
 double total = 0;
+double tax = 0;
     /**
      * Creates new form Restaurant1
      */
@@ -324,7 +325,7 @@ double total = 0;
     }//GEN-LAST:event_CheeseCheckboxActionPerformed
 
     private void TaxCheckboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_TaxCheckboxActionPerformed
-        double tax = total*0.095;
+        tax = total*0.095;
         DecimalFormat df = new DecimalFormat("#.##");
         String t = df.format(tax);
         jTextArea1.append("\nTax:\t\t\t\t$" + t + "\n");
@@ -355,7 +356,7 @@ double total = 0;
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         double taxtotal = tax + total;
-        jTextArea1.append("Total\t\t\t\t" + );
+        jTextArea1.append("Total\t\t\t\t" + taxtotal);
     }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
