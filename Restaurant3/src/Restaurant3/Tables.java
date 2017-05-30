@@ -4,19 +4,39 @@
  * and open the template in the editor.
  */
 package Restaurant3;
+import java.awt.image.BufferedImage;
+import java.io.*;
+import javax.imageio.*;
+import java.awt.Dimension;
+import java.awt.Graphics;
 
 /**
  *
  * @author toocla17
  */
-public class Tables extends javax.swing.JPanel {
 
+public class Tables extends javax.swing.JPanel {
+    
+    
     /**
      * Creates new form Tables
      */
     public Tables() {
         initComponents();
     }
+    
+    public void paintComponent(Graphics g){
+        BufferedImage burger = null;
+        try {
+            burger = ImageIO.read(new File("burger.jpg"));
+        } 
+        catch (IOException e) {
+        }
+        super.paintComponent(g);
+        g.drawImage(burger, 0, 0, null);
+    }
+    
+    int tablenum = 0;
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -36,7 +56,7 @@ public class Tables extends javax.swing.JPanel {
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
 
-        jLabel1.setFont(new java.awt.Font("Monotype Corsiva", 0, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Monotype Corsiva", 0, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 153, 153));
         jLabel1.setText("Welcome to Archie's Munchies!");
 
@@ -122,7 +142,7 @@ public class Tables extends javax.swing.JPanel {
                                 .addGap(59, 59, 59)
                                 .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(189, 189, 189)
+                        .addGap(125, 125, 125)
                         .addComponent(jLabel1)))
                 .addContainerGap(62, Short.MAX_VALUE))
         );
@@ -143,32 +163,38 @@ public class Tables extends javax.swing.JPanel {
                     .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(64, Short.MAX_VALUE))
+                .addContainerGap(51, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         this.setVisible(false);
+        tablenum = 1;
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         this.setVisible(false);
+        tablenum = 2;
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         this.setVisible(false);
+        tablenum = 3;
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         this.setVisible(false);
+        tablenum = 4;
     }//GEN-LAST:event_jButton4ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
         this.setVisible(false);
+        tablenum = 5;
     }//GEN-LAST:event_jButton5ActionPerformed
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         this.setVisible(false);
+        tablenum = 6;
     }//GEN-LAST:event_jButton6ActionPerformed
 
 
