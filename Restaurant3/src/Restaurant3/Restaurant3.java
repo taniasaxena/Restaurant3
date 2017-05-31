@@ -24,7 +24,8 @@ int tablenum = 0;
      */
     public Restaurant3() {
         initComponents();
-        
+        jDialog1.setVisible(true);
+        jDialog1.setAlwaysOnTop(true);
     }
 
     /**
@@ -36,15 +37,15 @@ int tablenum = 0;
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel2 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
+        jDialog1 = new javax.swing.JDialog();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        tableOneButton = new javax.swing.JButton();
+        tableTwoButton = new javax.swing.JButton();
+        tableThreeButton = new javax.swing.JButton();
+        tableFourButton = new javax.swing.JButton();
+        tableFiveButton = new javax.swing.JButton();
+        tableSixButton = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
@@ -64,113 +65,118 @@ int tablenum = 0;
         jLabel1 = new javax.swing.JLabel();
         ExitButton = new javax.swing.JButton();
 
-        jLabel2.setFont(new java.awt.Font("Monotype Corsiva", 0, 36)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 153, 153));
-        jLabel2.setText("Welcome to Archie's Munchies!");
+        jDialog1.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        jDialog1.setAlwaysOnTop(true);
+        jDialog1.setMinimumSize(new java.awt.Dimension(650, 460));
+        jDialog1.setResizable(false);
 
-        jLabel3.setFont(new java.awt.Font("Monotype Corsiva", 0, 18)); // NOI18N
-        jLabel3.setText("Pick your table:");
+        jLabel4.setFont(new java.awt.Font("Monotype Corsiva", 0, 36)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(0, 153, 153));
+        jLabel4.setText("Welcome to Archie's Munchies!");
 
-        jButton2.setBackground(new java.awt.Color(0, 153, 153));
-        jButton2.setFont(new java.awt.Font("Monotype Corsiva", 0, 18)); // NOI18N
-        jButton2.setText("Table 1");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        jLabel5.setFont(new java.awt.Font("Monotype Corsiva", 0, 18)); // NOI18N
+        jLabel5.setText("Pick your table:");
+
+        tableOneButton.setBackground(new java.awt.Color(0, 153, 153));
+        tableOneButton.setFont(new java.awt.Font("Monotype Corsiva", 0, 18)); // NOI18N
+        tableOneButton.setText("Table 1");
+        tableOneButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                tableOneButtonActionPerformed(evt);
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(0, 153, 153));
-        jButton3.setFont(new java.awt.Font("Monotype Corsiva", 0, 18)); // NOI18N
-        jButton3.setText("Table 2");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        tableTwoButton.setBackground(new java.awt.Color(0, 153, 153));
+        tableTwoButton.setFont(new java.awt.Font("Monotype Corsiva", 0, 18)); // NOI18N
+        tableTwoButton.setText("Table 2");
+        tableTwoButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                tableTwoButtonActionPerformed(evt);
             }
         });
 
-        jButton5.setBackground(new java.awt.Color(0, 153, 153));
-        jButton5.setFont(new java.awt.Font("Monotype Corsiva", 0, 18)); // NOI18N
-        jButton5.setText("Table 3");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        tableThreeButton.setBackground(new java.awt.Color(0, 153, 153));
+        tableThreeButton.setFont(new java.awt.Font("Monotype Corsiva", 0, 18)); // NOI18N
+        tableThreeButton.setText("Table 3");
+        tableThreeButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                tableThreeButtonActionPerformed(evt);
             }
         });
 
-        jButton4.setBackground(new java.awt.Color(0, 153, 153));
-        jButton4.setFont(new java.awt.Font("Monotype Corsiva", 0, 18)); // NOI18N
-        jButton4.setText("Table 4");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        tableFourButton.setBackground(new java.awt.Color(0, 153, 153));
+        tableFourButton.setFont(new java.awt.Font("Monotype Corsiva", 0, 18)); // NOI18N
+        tableFourButton.setText("Table 4");
+        tableFourButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                tableFourButtonActionPerformed(evt);
             }
         });
 
-        jButton6.setBackground(new java.awt.Color(0, 153, 153));
-        jButton6.setFont(new java.awt.Font("Monotype Corsiva", 0, 18)); // NOI18N
-        jButton6.setText("Table 5");
-        jButton6.addActionListener(new java.awt.event.ActionListener() {
+        tableFiveButton.setBackground(new java.awt.Color(0, 153, 153));
+        tableFiveButton.setFont(new java.awt.Font("Monotype Corsiva", 0, 18)); // NOI18N
+        tableFiveButton.setText("Table 5");
+        tableFiveButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton6ActionPerformed(evt);
+                tableFiveButtonActionPerformed(evt);
             }
         });
 
-        jButton7.setBackground(new java.awt.Color(0, 153, 153));
-        jButton7.setFont(new java.awt.Font("Monotype Corsiva", 0, 18)); // NOI18N
-        jButton7.setText("Table 6");
-        jButton7.addActionListener(new java.awt.event.ActionListener() {
+        tableSixButton.setBackground(new java.awt.Color(0, 153, 153));
+        tableSixButton.setFont(new java.awt.Font("Monotype Corsiva", 0, 18)); // NOI18N
+        tableSixButton.setText("Table 6");
+        tableSixButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton7ActionPerformed(evt);
+                tableSixButtonActionPerformed(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
+        javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
+        jDialog1.getContentPane().setLayout(jDialog1Layout);
+        jDialog1Layout.setHorizontalGroup(
+            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jDialog1Layout.createSequentialGroup()
+                .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jDialog1Layout.createSequentialGroup()
                         .addGap(266, 266, 266)
-                        .addComponent(jLabel3))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addComponent(jLabel5))
+                    .addGroup(jDialog1Layout.createSequentialGroup()
                         .addGap(54, 54, 54)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(tableFourButton, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(tableOneButton, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(55, 55, 55)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jDialog1Layout.createSequentialGroup()
+                                .addComponent(tableFiveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(tableSixButton, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jDialog1Layout.createSequentialGroup()
+                                .addComponent(tableTwoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(59, 59, 59)
-                                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(tableThreeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jDialog1Layout.createSequentialGroup()
                         .addGap(125, 125, 125)
-                        .addComponent(jLabel2)))
+                        .addComponent(jLabel4)))
                 .addContainerGap(59, Short.MAX_VALUE))
         );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+        jDialog1Layout.setVerticalGroup(
+            jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jDialog1Layout.createSequentialGroup()
                 .addGap(47, 47, 47)
-                .addComponent(jLabel2)
+                .addComponent(jLabel4)
                 .addGap(18, 18, 18)
-                .addComponent(jLabel3)
+                .addComponent(jLabel5)
                 .addGap(43, 43, 43)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tableOneButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tableTwoButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tableThreeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(59, 59, 59)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton7, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(tableFourButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tableFiveButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(tableSixButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(51, Short.MAX_VALUE))
         );
 
@@ -472,6 +478,7 @@ int tablenum = 0;
 
     private void HomeDeliveryCheckBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_HomeDeliveryCheckBoxActionPerformed
         jTextArea1.append("Delivery Fee\t\t\t$3.00\n");
+        total += 3.00;
     }//GEN-LAST:event_HomeDeliveryCheckBoxActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -479,35 +486,41 @@ int tablenum = 0;
         jTextArea1.append("Total\t\t\t\t" + taxtotal);
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        this.setVisible(false);
+    private void tableOneButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tableOneButtonActionPerformed
         tablenum = 1;
-    }//GEN-LAST:event_jButton2ActionPerformed
+        jDialog1.setVisible(false);
+        jTextArea1.append("\t\t Table " + tablenum + "\n");
+    }//GEN-LAST:event_tableOneButtonActionPerformed
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        this.setVisible(false);
-        tablenum = 3;
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-        this.setVisible(false);
-        tablenum = 5;
-    }//GEN-LAST:event_jButton5ActionPerformed
-
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        this.setVisible(false);
+    private void tableTwoButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tableTwoButtonActionPerformed
         tablenum = 2;
-    }//GEN-LAST:event_jButton4ActionPerformed
+        jDialog1.setVisible(false);
+        jTextArea1.append("\t\t Table " + tablenum + "\n");
+    }//GEN-LAST:event_tableTwoButtonActionPerformed
 
-    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
-        this.setVisible(false);
+    private void tableThreeButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tableThreeButtonActionPerformed
+        tablenum = 3;
+        jDialog1.setVisible(false);
+        jTextArea1.append("\t\t Table " + tablenum + "\n");
+    }//GEN-LAST:event_tableThreeButtonActionPerformed
+
+    private void tableFourButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tableFourButtonActionPerformed
         tablenum = 4;
-    }//GEN-LAST:event_jButton6ActionPerformed
+        jDialog1.setVisible(false);
+        jTextArea1.append("\t\t Table " + tablenum + "\n");
+    }//GEN-LAST:event_tableFourButtonActionPerformed
 
-    private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
-        this.setVisible(false);
+    private void tableFiveButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tableFiveButtonActionPerformed
+        tablenum = 5;
+        jDialog1.setVisible(false);
+        jTextArea1.append("\t\t Table " + tablenum + "\n");
+    }//GEN-LAST:event_tableFiveButtonActionPerformed
+
+    private void tableSixButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_tableSixButtonActionPerformed
         tablenum = 6;
-    }//GEN-LAST:event_jButton7ActionPerformed
+        jDialog1.setVisible(false);
+        jTextArea1.append("\t\t Table " + tablenum + "\n");
+    }//GEN-LAST:event_tableSixButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -555,17 +568,11 @@ int tablenum = 0;
     private javax.swing.JCheckBox HomeDeliveryCheckBox;
     private javax.swing.JCheckBox TaxCheckbox;
     private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
+    private javax.swing.JDialog jDialog1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
@@ -573,5 +580,11 @@ int tablenum = 0;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JButton tableFiveButton;
+    private javax.swing.JButton tableFourButton;
+    private javax.swing.JButton tableOneButton;
+    private javax.swing.JButton tableSixButton;
+    private javax.swing.JButton tableThreeButton;
+    private javax.swing.JButton tableTwoButton;
     // End of variables declaration//GEN-END:variables
 }
