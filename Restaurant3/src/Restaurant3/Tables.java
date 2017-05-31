@@ -25,6 +25,7 @@ public class Tables extends javax.swing.JPanel {
         initComponents();
     }
     
+    @Override
     public void paintComponent(Graphics g){
         BufferedImage burger = null;
         try {
@@ -63,7 +64,7 @@ public class Tables extends javax.swing.JPanel {
         jLabel2.setFont(new java.awt.Font("Monotype Corsiva", 0, 18)); // NOI18N
         jLabel2.setText("Pick your table:");
 
-        jButton1.setBackground(new java.awt.Color(0, 153, 153));
+        jButton1.setBackground(new java.awt.Color(204, 255, 255));
         jButton1.setFont(new java.awt.Font("Monotype Corsiva", 0, 18)); // NOI18N
         jButton1.setText("Table 1");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -72,7 +73,7 @@ public class Tables extends javax.swing.JPanel {
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(0, 153, 153));
+        jButton2.setBackground(new java.awt.Color(204, 255, 255));
         jButton2.setFont(new java.awt.Font("Monotype Corsiva", 0, 18)); // NOI18N
         jButton2.setText("Table 4");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -81,7 +82,7 @@ public class Tables extends javax.swing.JPanel {
             }
         });
 
-        jButton3.setBackground(new java.awt.Color(0, 153, 153));
+        jButton3.setBackground(new java.awt.Color(204, 255, 255));
         jButton3.setFont(new java.awt.Font("Monotype Corsiva", 0, 18)); // NOI18N
         jButton3.setText("Table 2");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
@@ -90,7 +91,7 @@ public class Tables extends javax.swing.JPanel {
             }
         });
 
-        jButton4.setBackground(new java.awt.Color(0, 153, 153));
+        jButton4.setBackground(new java.awt.Color(204, 255, 255));
         jButton4.setFont(new java.awt.Font("Monotype Corsiva", 0, 18)); // NOI18N
         jButton4.setText("Table 5");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
@@ -99,7 +100,7 @@ public class Tables extends javax.swing.JPanel {
             }
         });
 
-        jButton5.setBackground(new java.awt.Color(0, 153, 153));
+        jButton5.setBackground(new java.awt.Color(204, 255, 255));
         jButton5.setFont(new java.awt.Font("Monotype Corsiva", 0, 18)); // NOI18N
         jButton5.setText("Table 3");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
@@ -108,7 +109,7 @@ public class Tables extends javax.swing.JPanel {
             }
         });
 
-        jButton6.setBackground(new java.awt.Color(0, 153, 153));
+        jButton6.setBackground(new java.awt.Color(204, 255, 255));
         jButton6.setFont(new java.awt.Font("Monotype Corsiva", 0, 18)); // NOI18N
         jButton6.setText("Table 6");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
