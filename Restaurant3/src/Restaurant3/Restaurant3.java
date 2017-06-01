@@ -49,23 +49,27 @@ int tablenum = 0;
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
+        FrieswketchupCheckbox = new javax.swing.JCheckBox();
+        CurlyFriesCheckbox = new javax.swing.JCheckBox();
         jPanel3 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jTabbedPane2 = new javax.swing.JTabbedPane();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
         jPanel5 = new javax.swing.JPanel();
+        DrinksLabel = new javax.swing.JLabel();
+        DrinksCombobox = new javax.swing.JComboBox();
         jPanel6 = new javax.swing.JPanel();
+        TaxCheckbox = new javax.swing.JCheckBox();
+        HomeDeliveryCheckBox = new javax.swing.JCheckBox();
         jPanel7 = new javax.swing.JPanel();
         ChickenBurgerCheckbox = new javax.swing.JCheckBox();
         ChickenBurgerMealCheckbox = new javax.swing.JCheckBox();
         CheeseCheckbox = new javax.swing.JCheckBox();
-        DrinksLabel = new javax.swing.JLabel();
-        DrinksCombobox = new javax.swing.JComboBox();
-        TaxCheckbox = new javax.swing.JCheckBox();
-        HomeDeliveryCheckBox = new javax.swing.JCheckBox();
-        jButton1 = new javax.swing.JButton();
+        jLabel6 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         ExitButton = new javax.swing.JButton();
 
@@ -217,33 +221,75 @@ int tablenum = 0;
 
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
 
+        jLabel7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel7.setText("Fries");
+
+        FrieswketchupCheckbox.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        FrieswketchupCheckbox.setText("Fries with ketchup");
+        FrieswketchupCheckbox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                FrieswketchupCheckboxActionPerformed(evt);
+            }
+        });
+
+        CurlyFriesCheckbox.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        CurlyFriesCheckbox.setText("Curly Fries");
+        CurlyFriesCheckbox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                CurlyFriesCheckboxActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 313, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(33, 33, 33)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(CurlyFriesCheckbox)
+                    .addComponent(FrieswketchupCheckbox)
+                    .addComponent(jLabel7))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel7)
+                .addGap(18, 18, 18)
+                .addComponent(FrieswketchupCheckbox)
+                .addGap(18, 18, 18)
+                .addComponent(CurlyFriesCheckbox)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
+
+        jButton1.setBackground(new java.awt.Color(255, 204, 102));
+        jButton1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(102, 0, 0));
+        jButton1.setText("Total");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 210, Short.MAX_VALUE)
+            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE)
         );
 
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
 
-        jTabbedPane1.addTab("tab1", jTabbedPane2);
+        jTabbedPane1.addTab("Calculator", jTabbedPane2);
 
         jTextArea1.setColumns(20);
         jTextArea1.setFont(new java.awt.Font("Monospaced", 0, 18)); // NOI18N
@@ -272,28 +318,75 @@ int tablenum = 0;
 
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
 
+        DrinksLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        DrinksLabel.setText("Drinks ");
+
+        DrinksCombobox.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        DrinksCombobox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "<None>", "Coke", "Sprite", "Fanta", "Root Beer" }));
+        DrinksCombobox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DrinksComboboxActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(19, 19, 19)
+                .addComponent(DrinksLabel)
+                .addGap(64, 64, 64)
+                .addComponent(DrinksCombobox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(119, Short.MAX_VALUE))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 208, Short.MAX_VALUE)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(DrinksLabel)
+                    .addComponent(DrinksCombobox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(164, Short.MAX_VALUE))
         );
 
         jPanel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
+
+        TaxCheckbox.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        TaxCheckbox.setText("Tax");
+        TaxCheckbox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                TaxCheckboxActionPerformed(evt);
+            }
+        });
+
+        HomeDeliveryCheckBox.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        HomeDeliveryCheckBox.setText("Home Delivery ");
+        HomeDeliveryCheckBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                HomeDeliveryCheckBoxActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
         jPanel6.setLayout(jPanel6Layout);
         jPanel6Layout.setHorizontalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 313, Short.MAX_VALUE)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(HomeDeliveryCheckBox)
+                    .addComponent(TaxCheckbox))
+                .addContainerGap(176, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 208, Short.MAX_VALUE)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addComponent(TaxCheckbox)
+                .addGap(18, 18, 18)
+                .addComponent(HomeDeliveryCheckBox)
+                .addContainerGap(120, Short.MAX_VALUE))
         );
 
         jPanel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
@@ -322,84 +415,38 @@ int tablenum = 0;
             }
         });
 
-        DrinksLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        DrinksLabel.setText("Drinks ");
-
-        DrinksCombobox.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        DrinksCombobox.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "<None>", "Coke", "Sprite", "Fanta", "Root Beer" }));
-        DrinksCombobox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                DrinksComboboxActionPerformed(evt);
-            }
-        });
-
-        TaxCheckbox.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        TaxCheckbox.setText("Tax");
-        TaxCheckbox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                TaxCheckboxActionPerformed(evt);
-            }
-        });
-
-        HomeDeliveryCheckBox.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        HomeDeliveryCheckBox.setText("Home Delivery ");
-        HomeDeliveryCheckBox.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                HomeDeliveryCheckBoxActionPerformed(evt);
-            }
-        });
-
-        jButton1.setText("Total");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
+        jLabel6.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
+        jLabel6.setText("Burgers");
 
         javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
                 .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(TaxCheckbox)
-                    .addComponent(ChickenBurgerMealCheckbox)
-                    .addComponent(ChickenBurgerCheckbox)
-                    .addComponent(CheeseCheckbox)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel7Layout.createSequentialGroup()
-                        .addComponent(DrinksLabel)
-                        .addGap(40, 40, 40)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(HomeDeliveryCheckBox)
-                    .addComponent(DrinksCombobox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(36, 36, 36))
-            .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGap(136, 136, 136)
-                .addComponent(jButton1)
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGap(21, 21, 21)
+                        .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(ChickenBurgerMealCheckbox)
+                            .addComponent(ChickenBurgerCheckbox)
+                            .addComponent(CheeseCheckbox)))
+                    .addGroup(jPanel7Layout.createSequentialGroup()
+                        .addGap(42, 42, 42)
+                        .addComponent(jLabel6)))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel7Layout.createSequentialGroup()
-                .addGap(19, 19, 19)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel6)
+                .addGap(18, 18, 18)
                 .addComponent(ChickenBurgerCheckbox)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(ChickenBurgerMealCheckbox)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGap(18, 18, 18)
                 .addComponent(CheeseCheckbox)
-                .addGap(18, 18, 18)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(DrinksLabel)
-                    .addComponent(DrinksCombobox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(TaxCheckbox)
-                    .addComponent(HomeDeliveryCheckBox))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(64, Short.MAX_VALUE))
         );
 
         jLabel1.setFont(new java.awt.Font("Tw Cen MT", 1, 36)); // NOI18N
@@ -432,9 +479,9 @@ int tablenum = 0;
                                     .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                     .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                             .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -557,6 +604,16 @@ int tablenum = 0;
         jTextArea1.append("\t\t Table " + tablenum + "\n");
     }//GEN-LAST:event_tableSixButtonActionPerformed
 
+    private void FrieswketchupCheckboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FrieswketchupCheckboxActionPerformed
+        jTextArea1.append("1 Fries with Ketchup \t\t$1.00\n");
+        total+=1.00;
+    }//GEN-LAST:event_FrieswketchupCheckboxActionPerformed
+
+    private void CurlyFriesCheckboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_CurlyFriesCheckboxActionPerformed
+        jTextArea1.append("1 Curly Fries \t\t\t$3.00\n");
+        total+=3.00;
+    }//GEN-LAST:event_CurlyFriesCheckboxActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -597,9 +654,11 @@ int tablenum = 0;
     private javax.swing.JCheckBox CheeseCheckbox;
     private javax.swing.JCheckBox ChickenBurgerCheckbox;
     private javax.swing.JCheckBox ChickenBurgerMealCheckbox;
+    private javax.swing.JCheckBox CurlyFriesCheckbox;
     private javax.swing.JComboBox DrinksCombobox;
     private javax.swing.JLabel DrinksLabel;
     private javax.swing.JButton ExitButton;
+    private javax.swing.JCheckBox FrieswketchupCheckbox;
     private javax.swing.JCheckBox HomeDeliveryCheckBox;
     private javax.swing.JCheckBox TaxCheckbox;
     private javax.swing.JButton jButton1;
@@ -609,6 +668,8 @@ int tablenum = 0;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
