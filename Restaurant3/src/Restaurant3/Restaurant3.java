@@ -75,6 +75,7 @@ int tablenum = 0;
 
         jDialog1.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         jDialog1.setAlwaysOnTop(true);
+        jDialog1.setBackground(new java.awt.Color(255, 204, 204));
         jDialog1.setMinimumSize(new java.awt.Dimension(1000, 850));
         jDialog1.setModal(true);
         jDialog1.setResizable(false);
@@ -148,11 +149,11 @@ int tablenum = 0;
         });
 
         jLabel2.setFont(new java.awt.Font("Monotype Corsiva", 0, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 204, 204));
+        jLabel2.setForeground(new java.awt.Color(51, 0, 0));
         jLabel2.setText("Entrance");
 
         jLabel3.setFont(new java.awt.Font("Monotype Corsiva", 0, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(0, 204, 204));
+        jLabel3.setForeground(new java.awt.Color(51, 0, 0));
         jLabel3.setText("Exit");
 
         javax.swing.GroupLayout jDialog1Layout = new javax.swing.GroupLayout(jDialog1.getContentPane());
@@ -200,7 +201,7 @@ int tablenum = 0;
                 .addGap(18, 18, 18)
                 .addComponent(jLabel5)
                 .addGap(45, 45, 45)
-                .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(jDialog1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(tableThreeButton, javax.swing.GroupLayout.PREFERRED_SIZE, 152, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jDialog1Layout.createSequentialGroup()
                         .addGap(1, 1, 1)
@@ -219,6 +220,7 @@ int tablenum = 0;
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
+        jPanel1.setBackground(new java.awt.Color(255, 204, 102));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
 
         jLabel7.setFont(new java.awt.Font("Tahoma", 0, 18)); // NOI18N
@@ -266,9 +268,9 @@ int tablenum = 0;
 
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
 
-        jButton1.setBackground(new java.awt.Color(255, 204, 102));
+        jButton1.setBackground(new java.awt.Color(255, 255, 204));
         jButton1.setFont(new java.awt.Font("Tahoma", 0, 24)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(102, 0, 0));
+        jButton1.setForeground(new java.awt.Color(255, 153, 0));
         jButton1.setText("Total");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -316,6 +318,7 @@ int tablenum = 0;
                 .addContainerGap())
         );
 
+        jPanel5.setBackground(new java.awt.Color(255, 204, 0));
         jPanel5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
 
         DrinksLabel.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -350,6 +353,7 @@ int tablenum = 0;
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        jPanel6.setBackground(new java.awt.Color(255, 255, 51));
         jPanel6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
 
         TaxCheckbox.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -389,6 +393,7 @@ int tablenum = 0;
                 .addContainerGap(123, Short.MAX_VALUE))
         );
 
+        jPanel7.setBackground(new java.awt.Color(255, 153, 153));
         jPanel7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
 
         ChickenBurgerCheckbox.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
@@ -449,10 +454,13 @@ int tablenum = 0;
                 .addContainerGap(64, Short.MAX_VALUE))
         );
 
+        jLabel1.setBackground(new java.awt.Color(255, 204, 204));
         jLabel1.setFont(new java.awt.Font("Tw Cen MT", 1, 36)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(102, 0, 0));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Restaurant Management System ");
 
+        ExitButton.setBackground(new java.awt.Color(255, 153, 51));
         ExitButton.setText("exit");
         ExitButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
