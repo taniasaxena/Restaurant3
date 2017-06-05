@@ -54,6 +54,7 @@ int tablenum = 0;
         CurlyFriesCheckbox = new javax.swing.JCheckBox();
         jPanel3 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -64,6 +65,9 @@ int tablenum = 0;
         jPanel5 = new javax.swing.JPanel();
         DrinksLabel = new javax.swing.JLabel();
         DrinksCombobox = new javax.swing.JComboBox();
+        jLabel8 = new javax.swing.JLabel();
+        DrinksCombobox1 = new javax.swing.JComboBox();
+        jLabel9 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         TaxCheckbox = new javax.swing.JCheckBox();
         HomeDeliveryCheckBox = new javax.swing.JCheckBox();
@@ -86,12 +90,12 @@ int tablenum = 0;
         jLabel4.setForeground(new java.awt.Color(153, 51, 0));
         jLabel4.setText("Welcome to Archie's Munchies!");
 
-        jLabel5.setFont(new java.awt.Font("Monotype Corsiva", 0, 18)); // NOI18N
+        jLabel5.setFont(new java.awt.Font("Monotype Corsiva", 0, 24)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(153, 51, 0));
         jLabel5.setText("Pick your table :");
 
         tableOneButton.setBackground(new java.awt.Color(255, 204, 153));
-        tableOneButton.setFont(new java.awt.Font("Monotype Corsiva", 0, 18)); // NOI18N
+        tableOneButton.setFont(new java.awt.Font("Monotype Corsiva", 0, 24)); // NOI18N
         tableOneButton.setForeground(new java.awt.Color(102, 51, 0));
         tableOneButton.setText("Table 1");
         tableOneButton.addActionListener(new java.awt.event.ActionListener() {
@@ -101,7 +105,7 @@ int tablenum = 0;
         });
 
         tableTwoButton.setBackground(new java.awt.Color(255, 204, 153));
-        tableTwoButton.setFont(new java.awt.Font("Monotype Corsiva", 0, 18)); // NOI18N
+        tableTwoButton.setFont(new java.awt.Font("Monotype Corsiva", 0, 24)); // NOI18N
         tableTwoButton.setForeground(new java.awt.Color(102, 51, 0));
         tableTwoButton.setText("Table 2");
         tableTwoButton.addActionListener(new java.awt.event.ActionListener() {
@@ -111,7 +115,7 @@ int tablenum = 0;
         });
 
         tableThreeButton.setBackground(new java.awt.Color(255, 204, 153));
-        tableThreeButton.setFont(new java.awt.Font("Monotype Corsiva", 0, 18)); // NOI18N
+        tableThreeButton.setFont(new java.awt.Font("Monotype Corsiva", 0, 24)); // NOI18N
         tableThreeButton.setForeground(new java.awt.Color(102, 51, 0));
         tableThreeButton.setText("Table 3");
         tableThreeButton.addActionListener(new java.awt.event.ActionListener() {
@@ -121,7 +125,7 @@ int tablenum = 0;
         });
 
         tableFourButton.setBackground(new java.awt.Color(255, 204, 153));
-        tableFourButton.setFont(new java.awt.Font("Monotype Corsiva", 0, 18)); // NOI18N
+        tableFourButton.setFont(new java.awt.Font("Monotype Corsiva", 0, 24)); // NOI18N
         tableFourButton.setForeground(new java.awt.Color(102, 51, 0));
         tableFourButton.setText("Table 4");
         tableFourButton.addActionListener(new java.awt.event.ActionListener() {
@@ -131,7 +135,7 @@ int tablenum = 0;
         });
 
         tableFiveButton.setBackground(new java.awt.Color(255, 204, 153));
-        tableFiveButton.setFont(new java.awt.Font("Monotype Corsiva", 0, 18)); // NOI18N
+        tableFiveButton.setFont(new java.awt.Font("Monotype Corsiva", 0, 24)); // NOI18N
         tableFiveButton.setForeground(new java.awt.Color(102, 51, 0));
         tableFiveButton.setText("Table 5");
         tableFiveButton.addActionListener(new java.awt.event.ActionListener() {
@@ -141,7 +145,7 @@ int tablenum = 0;
         });
 
         tableSixButton.setBackground(new java.awt.Color(255, 204, 153));
-        tableSixButton.setFont(new java.awt.Font("Monotype Corsiva", 0, 18)); // NOI18N
+        tableSixButton.setFont(new java.awt.Font("Monotype Corsiva", 0, 24)); // NOI18N
         tableSixButton.setForeground(new java.awt.Color(102, 51, 0));
         tableSixButton.setText("Table 6");
         tableSixButton.addActionListener(new java.awt.event.ActionListener() {
@@ -213,7 +217,7 @@ int tablenum = 0;
                     .addComponent(tableFiveButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(tableFourButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(tableSixButton, javax.swing.GroupLayout.PREFERRED_SIZE, 158, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 54, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 47, Short.MAX_VALUE)
                 .addComponent(jLabel3)
                 .addContainerGap())
         );
@@ -278,15 +282,28 @@ int tablenum = 0;
             }
         });
 
+        jButton3.setFont(new java.awt.Font("Tahoma", 1, 24)); // NOI18N
+        jButton3.setForeground(new java.awt.Color(204, 0, 0));
+        jButton3.setText("RESET");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 409, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 313, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE)
+            .addComponent(jButton3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         jPanel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0), 4));
@@ -300,22 +317,27 @@ int tablenum = 0;
         jTabbedPane1.addTab("Receipt", jScrollPane2);
 
         jButton2.setText("jButton2");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
         jPanel8.setLayout(jPanel8Layout);
         jPanel8Layout.setHorizontalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
-                .addGap(139, 139, 139)
-                .addComponent(jButton2)
-                .addContainerGap(249, Short.MAX_VALUE))
+                .addGap(22, 22, 22)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 408, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(31, Short.MAX_VALUE))
         );
         jPanel8Layout.setVerticalGroup(
             jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel8Layout.createSequentialGroup()
-                .addGap(94, 94, 94)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(491, Short.MAX_VALUE))
+                .addGap(31, 31, 31)
+                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(533, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -344,7 +366,7 @@ int tablenum = 0;
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 683, Short.MAX_VALUE)
+                .addComponent(jTabbedPane1)
                 .addContainerGap())
         );
 
@@ -362,25 +384,54 @@ int tablenum = 0;
             }
         });
 
+        jLabel8.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel8.setText("Small (8 oz):");
+
+        DrinksCombobox1.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        DrinksCombobox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "<None>", "Coke", "Sprite", "Fanta", "Root Beer" }));
+        DrinksCombobox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                DrinksCombobox1ActionPerformed(evt);
+            }
+        });
+
+        jLabel9.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
+        jLabel9.setText("Large (16 oz):");
+
         javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
         jPanel5.setLayout(jPanel5Layout);
         jPanel5Layout.setHorizontalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGap(38, 38, 38)
-                .addComponent(DrinksLabel)
-                .addGap(45, 45, 45)
-                .addComponent(DrinksCombobox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(119, Short.MAX_VALUE))
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addComponent(DrinksLabel)
+                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel8)
+                            .addComponent(jLabel9))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 100, Short.MAX_VALUE)
+                        .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(DrinksCombobox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(DrinksCombobox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(95, 95, 95))))
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel5Layout.createSequentialGroup()
                 .addGap(24, 24, 24)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(DrinksLabel)
+                .addGap(10, 10, 10)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(DrinksCombobox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(DrinksLabel))
-                .addContainerGap(164, Short.MAX_VALUE))
+                    .addComponent(jLabel8))
+                .addGap(30, 30, 30)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(DrinksCombobox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel9))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jPanel6.setBackground(new java.awt.Color(255, 255, 51));
@@ -507,7 +558,7 @@ int tablenum = 0;
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1036, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -516,10 +567,10 @@ int tablenum = 0;
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                        .addGap(0, 84, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -539,10 +590,10 @@ int tablenum = 0;
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGap(11, 11, 11)
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         pack();
@@ -577,18 +628,17 @@ int tablenum = 0;
     private void DrinksComboboxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DrinksComboboxActionPerformed
         if(DrinksCombobox.getSelectedIndex() == 0){
             jTextArea1.append("No Drink\t\t\t$0.00\n");
-            total+=1.00;
         }else if(DrinksCombobox.getSelectedIndex() == 1){
-            jTextArea1.append("1 Coke Drink\t\t\t$1.00\n");
+            jTextArea1.append("1 Coke Drink - Small\t\t$1.00\n");
             total+=1.00;
         }else if(DrinksCombobox.getSelectedIndex() == 2){
-            jTextArea1.append("1 Sprite Drink\t\t\t$1.00\n");
+            jTextArea1.append("1 Sprite Drink - Small\t\t$1.00\n");
             total+=1.00;
         }else if(DrinksCombobox.getSelectedIndex() == 3){
-            jTextArea1.append("1 Fanta Drink\t\t\t$1.00\n");
+            jTextArea1.append("1 Fanta Drink - Small\t\t$1.00\n");
             total+=1.00;
         }else if(DrinksCombobox.getSelectedIndex() == 4){
-            jTextArea1.append("1 Root Beer Drink\t\t$1.00\n");
+            jTextArea1.append("1 Root Beer Drink - Small\t$1.00\n");
             total+=1.00;
         }
     }//GEN-LAST:event_DrinksComboboxActionPerformed
@@ -651,6 +701,34 @@ int tablenum = 0;
         total+=3.00;
     }//GEN-LAST:event_CurlyFriesCheckboxActionPerformed
 
+    private void DrinksCombobox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_DrinksCombobox1ActionPerformed
+        if(DrinksCombobox1.getSelectedIndex() == 0){
+            jTextArea1.append("No Drink\t\t\t$0.00\n");
+        }else if(DrinksCombobox1.getSelectedIndex() == 1){
+            jTextArea1.append("1 Coke Drink - Large\t$1.50\n");
+            total+=1.50;
+        }else if(DrinksCombobox1.getSelectedIndex() == 2){
+            jTextArea1.append("1 Sprite Drink - Large\t\t$1.50\n");
+            total+=1.50;
+        }else if(DrinksCombobox1.getSelectedIndex() == 3){
+            jTextArea1.append("1 Fanta Drink - Large\t\t$1.50\n");
+            total+=1.50;
+        }else if(DrinksCombobox1.getSelectedIndex() == 4){
+            jTextArea1.append("1 Root Beer Drink - Large\t$1.50\n");
+            total+=1.50;
+        }
+    }//GEN-LAST:event_DrinksCombobox1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        total = 0;
+        jTextArea1.setText("\t     Archie's Munchies\n\t\t   ~~~");
+        jTextArea1.append("\n\t\t Table " + tablenum + "\n");
+    }//GEN-LAST:event_jButton3ActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -692,6 +770,7 @@ int tablenum = 0;
     private javax.swing.JCheckBox ChickenBurgerMealCheckbox;
     private javax.swing.JCheckBox CurlyFriesCheckbox;
     private javax.swing.JComboBox DrinksCombobox;
+    private javax.swing.JComboBox DrinksCombobox1;
     private javax.swing.JLabel DrinksLabel;
     private javax.swing.JButton ExitButton;
     private javax.swing.JCheckBox FrieswketchupCheckbox;
@@ -699,6 +778,7 @@ int tablenum = 0;
     private javax.swing.JCheckBox TaxCheckbox;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JDialog jDialog1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -707,6 +787,8 @@ int tablenum = 0;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
